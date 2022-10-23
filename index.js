@@ -63,31 +63,4 @@ function findEmployeeByFirstName(srcArray, first_Name){
 
 // ////////////////
 
-        let rRecord = createEmployeeRecord(["Rafiki", "", "Aide", 10])
-        let sRecord = createEmployeeRecord(["Simba", "", "King", 100])
-
-        let sTimeData = [
-          ["2019-01-01 0900", "2019-01-01 1300"], // 4 * 100 = 400
-          ["2019-01-02 1000", "2019-01-02 1300"]  // 3 * 100 = 300 ===> 700 total
-        ]
-
-        let rTimeData = [
-          ["2019-01-11 0900", "2019-01-11 1300"], // 4 * 10 = 40
-          ["2019-01-12 1000", "2019-01-12 1300"]  // 3 * 10 = 40 ===> 70 total ||=> 770
-        ]
-
-        sTimeData.forEach(function (d) {
-          let [dIn, dOut] = d
-          sRecord = createTimeInEvent(sRecord, dIn)
-          sRecord = createTimeOutEvent(sRecord, dOut)
-        })
-
-        rTimeData.forEach(function (d, i) {
-          let [dIn, dOut] = d
-          rRecord = createTimeInEvent(rRecord, dIn)
-          rRecord = createTimeOutEvent(rRecord, dOut)
-        })
-
-        let employees = [sRecord, rRecord]
-
-        calculatePayroll(employees)
+       
